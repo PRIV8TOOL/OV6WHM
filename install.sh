@@ -5,4 +5,4 @@ read hostnya
 hostnamectl set-hostname $hostnya
 systemctl list-unit-files | grep NetworkManager
 curl -o latest -L http://httpupdate.cpanel.net/latest && sh latest
-printf '\e[0mYou can access WHM by visiting \e[0;32mhttp://'$(hostname -I | cut -d' ' -f1)'/whm\n'
+printf '\e[0mYou can access WHM by visiting \e[0;32mhttp://'$(hostname -I | cut -d' ' -f1)'/whm\e[0m\n'
